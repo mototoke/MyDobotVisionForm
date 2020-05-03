@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HomographySharp</name>
+    </assembly>
+    <members>
+        <member name="T:HomographySharp.Double.HomographyHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HomographySharp.Double.HomographyHelper.CreateVector2(System.Double,System.Double)">
+            <summary>
+            return DenseVector.OfArray(new double[] { x, y })
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns>DenseVector.OfArray(new double[] { x, y })</returns>
+        </member>
+        <member name="M:HomographySharp.Double.HomographyHelper.SetCoefficientMatrixParametersForDstX(MathNet.Numerics.LinearAlgebra.Double.DenseMatrix,System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            dstXの方の係数行列の設定。
+            </summary>
+            <param name="matrix"></param>
+            <param name="srcX"></param>
+            <param name="srcY"></param>
+            <param name="dstX"></param>
+            <param name="rowIndex"></param>
+        </member>
+        <member name="M:HomographySharp.Double.HomographyHelper.SetCoefficientMatrixParametersForDstY(MathNet.Numerics.LinearAlgebra.Double.DenseMatrix,System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            dstYの方の係数行列の設定。
+            </summary>
+            <param name="matrix"></param>
+            <param name="srcX"></param>
+            <param name="srcY"></param>
+            <param name="dstY"></param>
+            <param name="rowIndex"></param>
+        </member>
+        <member name="M:HomographySharp.Double.HomographyHelper.FindHomography(System.Collections.Generic.IReadOnlyList{MathNet.Numerics.LinearAlgebra.Double.DenseVector},System.Collections.Generic.IReadOnlyList{MathNet.Numerics.LinearAlgebra.Double.DenseVector})">
+            <summary>
+            All vectors contained in srcPoints and dstPoints must be two dimensional(x and y).
+            </summary>
+            <param name="srcPoints">need 4 or more points before translate</param>
+            <param name="dstPoints">need 4 or more points after translate</param>
+            <exception cref="T:System.ArgumentException">srcPoints and dstPoints must require 4 or more points</exception>
+            <exception cref="T:System.ArgumentException">srcPoints and dstPoints must same num</exception>
+            <exception cref="T:System.ArgumentException">All vectors contained in srcPoints and dstPoints must be two dimensional(x and y).</exception>
+            <returns>Homography Matrix</returns>
+        </member>
+        <member name="M:HomographySharp.Double.HomographyHelper.FindHomography(System.Collections.Generic.IReadOnlyList{System.Drawing.PointF},System.Collections.Generic.IReadOnlyList{System.Drawing.PointF})">
+            <summary>
+            </summary>
+            <param name="srcPoints">need 4 or more points before translate </param>
+            <param name="dstPoints">need 4 or more points after translate</param>
+            <exception cref="T:System.ArgumentException">srcPoints and dstPoints must require 4 or more points</exception>
+            <exception cref="T:System.ArgumentException">srcPoints and dstPoints must same num</exception>
+            <returns>Homography Matrix</returns>
+        </member>
+        <member name="M:HomographySharp.Double.HomographyHelper.Translate(MathNet.Numerics.LinearAlgebra.Double.DenseMatrix,System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="homography"></param>
+            <param name="srcX"></param>
+            <param name="srcY"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="T:HomographySharp.Double.HomographyMatrix">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HomographySharp.Double.HomographyMatrix.Source">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HomographySharp.Double.HomographyMatrix.#ctor(MathNet.Numerics.LinearAlgebra.Double.DenseMatrix)">
+            <summary>
+            
+            </summary>
+            <param name="homographyMatrix"></param>
+        </member>
+        <member name="M:HomographySharp.Double.HomographyMatrix.Translate(System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="srcX"></param>
+            <param name="srcY"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HomographySharp.Single.HomographyHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HomographySharp.Single.HomographyHelper.CreateVector2(System.Single,System.Single)">
+            <summary>
+            return DenseVector.OfArray(new float[] { x, y })
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns>DenseVector.OfArray(new float[] { x, y })</returns>
+        </member>
+        <member name="M:HomographySharp.Single.HomographyHelper.SetCoefficientMatrixParametersForDstX(MathNet.Numerics.LinearAlgebra.Single.DenseMatrix,System.Single,System.Single,System.Single,System.Int32)">
+            <summary>
+            dstXの方の係数行列の設定。
+            </summary>
+            <param name="matrix"></param>
+            <param name="srcX"></param>
+            <param name="srcY"></param>
+            <param name="dstX"></param>
+            <param name="rowIndex"></param>
+        </member>
+        <member name="M:HomographySharp.Single.HomographyHelper.SetCoefficientMatrixParametersForDstY(MathNet.Numerics.LinearAlgebra.Single.DenseMatrix,System.Single,System.Single,System.Single,System.Int32)">
+            <summary>
+            dstYの方の係数行列の設定。
+            </summary>
+            <param name="matrix"></param>
+            <param name="srcX"></param>
+            <param name="srcY"></param>
+            <param name="dstY"></param>
+            <param name="rowIndex"></param>
+        </member>
+        <member name="M:HomographySharp.Single.HomographyHelper.FindHomography(System.Collections.Generic.IReadOnlyList{MathNet.Numerics.LinearAlgebra.Single.DenseVector},System.Collections.Generic.IReadOnlyList{MathNet.Numerics.LinearAlgebra.Single.DenseVector})">
+            <summary>
+            All vectors contained in srcPoints and dstPoints must be two dimensional(x and y).
+            </summary>
+            <param name="srcPoints">need 4 or more points before translate</param>
+            <param name="dstPoints">need 4 or more points after translate</param>
+            <exception cref="T:System.ArgumentException">srcPoints and dstPoints must require 4 or more points</exception>
+            <exception cref="T:System.ArgumentException">srcPoints and dstPoints must same num</exception>
+            <exception cref="T:System.ArgumentException">All vectors contained in srcPoints and dstPoints must be two dimensional(x and y).</exception>
+            <returns>Homography Matrix</returns>
+        </member>
+        <member name="M:HomographySharp.Single.HomographyHelper.FindHomography(System.Collections.Generic.IReadOnlyList{System.Drawing.PointF},System.Collections.Generic.IReadOnlyList{System.Drawing.PointF})">
+            <summary>
+            </summary>
+            <param name="srcPoints">need 4 or more points before translate </param>
+            <param name="dstPoints">need 4 or more points after translate</param>
+            <exception cref="T:System.ArgumentException">srcPoints and dstPoints must require 4 or more points</exception>
+            <exception cref="T:System.ArgumentException">srcPoints and dstPoints must same num</exception>
+            <returns>Homography Matrix</returns>
+        </member>
+        <member name="M:HomographySharp.Single.HomographyHelper.Translate(MathNet.Numerics.LinearAlgebra.Single.DenseMatrix,System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="homography"></param>
+            <param name="srcX"></param>
+            <param name="srcY"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="T:HomographySharp.Single.HomographyMatrix">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HomographySharp.Single.HomographyMatrix.Source">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HomographySharp.Single.HomographyMatrix.#ctor(MathNet.Numerics.LinearAlgebra.Single.DenseMatrix)">
+            <summary>
+            
+            </summary>
+            <param name="homographyMatrix"></param>
+        </member>
+        <member name="M:HomographySharp.Single.HomographyMatrix.Translate(System.Single,System.Single)">
+            <summary>
+            
+            </summary>
+            <param name="srcX"></param>
+            <param name="srcY"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
